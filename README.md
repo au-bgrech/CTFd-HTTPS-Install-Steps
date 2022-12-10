@@ -5,7 +5,7 @@
 
 ## Install
 
-1. Complete the [CTFd Docker Install](https://docs.ctfd.io/docs/deployment/installation#docker).
+1. Complete the [CTFd Docker Install](https://docs.ctfd.io/docs/deployment/installation#docker)
    1. `apt update`
    2. `apt install docker.io docker-compose`
    3. `git clone https://github.com/CTFd/CTFd.git`
