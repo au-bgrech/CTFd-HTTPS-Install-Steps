@@ -33,3 +33,4 @@
 
 4. Start the CTFd instance!
    1. `docker-compose --restart=always up -d`
+   2. Open a web browser and navigate to your domain via HTTPS (e.g., https://ctf-example.teameffort.work)
