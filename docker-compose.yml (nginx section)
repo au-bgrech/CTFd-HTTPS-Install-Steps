@@ -1,0 +1,14 @@
+  nginx:
+    image: nginx:stable
+    restart: always
+    volumes:
+      - ./conf/nginx/https.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/live/ctf-example.teameffort.work/privkey.pem:/etc/nginx/ssl/live/ctf-example.teameffort.work/privkey.pem
+      - /etc/letsencrypt/live/ctf-example.teameffort.work/fullchain.pem:/etc/nginx/ssl/live/ctf-example.teameffort.work/fullchain.pem
+      - /etc/letsencrypt/live/ctf-example.teameffort.work/cert.pem:/etc/nginx/ssl/live/ctf-example.teameffort.work/cert.pem
+      - /etc/letsencrypt/live/ctf-example.teameffort.work/chain.pem:/etc/nginx/ssl/live/ctf-example.teameffort.work/chain.pem
+    ports:
+      - 80:80
+      - 443:8443
+    depends_on:
+      - ctfd
